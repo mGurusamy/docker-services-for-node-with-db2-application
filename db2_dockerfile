@@ -1,0 +1,7 @@
+# get the latest image for db2 community edition from docker registry
+FROM ibmcom/db2express-c
+LABEL maintainer="Manoharan Gurusamy"
+# we can copy some scripts from host machine to docker container if we wanted to run some DDL/DML scripts before bringing database
+RUN su - db2inst1 -c
+CMD ["db2start"]
+
